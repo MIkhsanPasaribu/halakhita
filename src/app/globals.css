@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* HalakHita Color Palette */
+  /* Primary Colors */
+  --merah-ulos: #8b1a1a; /* Deep red from ulos */
+  --hitam-batak: #1a1a1a; /* Deep black */
+  --putih-tenun: #fafaf8; /* Soft cream white */
+
+  /* Secondary Colors */
+  --emas-ornamen: #d4a574; /* Gold for accents */
+  --coklat-kayu: #6b4423; /* Wood brown from traditional houses */
+
+  /* Supporting Colors */
+  --abu-netral: #e5e5e5; /* Neutral background */
+  --hijau-toba: #2c5f2d; /* Lake Toba green */
+
+  /* Default theme */
+  --background: var(--putih-tenun);
+  --foreground: var(--hitam-batak);
+  --primary: var(--merah-ulos);
+  --secondary: var(--emas-ornamen);
+  --accent: var(--coklat-kayu);
+  --muted: var(--abu-netral);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-merah-ulos: var(--merah-ulos);
+  --color-hitam-batak: var(--hitam-batak);
+  --color-putih-tenun: var(--putih-tenun);
+  --color-emas-ornamen: var(--emas-ornamen);
+  --color-coklat-kayu: var(--coklat-kayu);
+  --color-abu-netral: var(--abu-netral);
+  --color-hijau-toba: var(--hijau-toba);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
